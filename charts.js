@@ -99,7 +99,7 @@ function buildCharts(sample) {
 
     // Deliverable 1: 9. Create the layout for the bar chart. 
     var layout = {
-      title: 'Top 10 OTUs',
+      title: 'Top 10 Bacteria Cultures Found',
       yaxis: {
         tickmode: 'linear'
       }
@@ -115,12 +115,13 @@ function buildCharts(sample) {
       mode: 'markers',
       marker: {
         size: sample_values,
-        color: otu_ids
+        color: otu_ids,
+        colorscale: 'Earth'
       }
     };
     // Deliverable 2: 2. Create the layout for the bubble chart.
     var layout2 = {
-      title: 'OTU IDs',
+      title: 'Bacteria Cultures per Sample',
       showlegend: false,
       height: 600,
       width: 1200
@@ -156,19 +157,19 @@ function buildCharts(sample) {
           color: 'cyan'
         }, {
           range: [1, 2],
-          color: 'royalblue'
+          color: 'green'
         }, {
           range: [2, 3],
           color: 'cyan'
         }, {
           range: [3, 4],
-          color: 'royalblue'
+          color: 'red'
         }, {
           range: [4, 5],
           color: 'cyan'
         }, {
           range: [5, 6],
-          color: 'royalblue'
+          color: 'yellow'
         }, {
           range: [6, 7],
           color: 'cyan'
